@@ -58,7 +58,7 @@ export default function passouPage() {
             </div>
             <div className="flex flex-col p-4 items-center justify-center max-w-[700px] max-h-[750px] h-5/6 w-5/6 bg-white rounded-lg fixed top-2/4 left-2/4 translate-y-[-45%] translate-x-[-50%] shadow-xl">
                 <h1 className="text-black text-2xl font-semibold">Passou ou não passou?</h1>
-                <div className="my-10 flex flex-col items-center gap-4">
+                <div className="my-10 flex flex-col items-center gap-2">
                     <div className="flex flex-col items-center gap-1">
                         <label htmlFor="nota1" className="text-lg">Primeira nota</label>
                         <input className="bg-yellowLight w-60 p-2 rounded-md md:w-80" id="nota1" type="text" value={nota1} placeholder="ex: 60" onChange={(e) => setNota1(e.target.value)}/>
