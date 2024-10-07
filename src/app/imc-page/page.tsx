@@ -7,7 +7,7 @@ import { ToastContainer, toast } from 'react-toastify';
 export default function imcPage() {
     const [peso, setPeso] = useState<string>("");
     const [altura, setAltura] = useState<string>("");
-    const [result, setResult] = useState <string | undefined>("");
+    const [result, setResult] = useState <string | undefined>("0");
     const msgError = "Insira um número válido";
 
     const calc = () => {
