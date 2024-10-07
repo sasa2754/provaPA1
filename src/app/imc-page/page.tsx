@@ -2,13 +2,12 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-
 import { ToastContainer, toast } from 'react-toastify';
 
 export default function imcPage() {
     const [peso, setPeso] = useState<string>("");
     const [altura, setAltura] = useState<string>("");
-    const [result, setResult] = useState <number | undefined>(0);
+    const [result, setResult] = useState <string | undefined>("");
     const msgError = "Insira um número válido";
 
     const calc = () => {
@@ -16,8 +15,10 @@ export default function imcPage() {
         const nAltura = parseFloat(altura);
 
         if(!isNaN(nPeso) && !isNaN(nAltura)) {
-            setResult(nPeso/(nAltura*nAltura));
+            const resultado = ((nPeso/(nAltura*nAltura))*1000).toFixed(2);
+            setResult(resultado);
         }
+
         else {
             toast("Insira um número válido", {
                 position: "top-right",
@@ -51,12 +52,12 @@ export default function imcPage() {
 
                     <div className="flex flex-col items-center gap-1">
                         <label htmlFor="altura" className="text-lg">Insira sua altura</label>
-                        <input className="bg-yellowLight w-60 p-2 rounded-md shadow md:w-80" id="altura" type="text" value={altura} placeholder="ex: 1.68" onChange={(e) => setAltura(e.target.value)}/>
+                        <input className="bg-yellowLight w-60 p-2 rounded-md shadow md:w-80" id="altura" type="text" value={altura} placeholder="ex: 168" onChange={(e) => setAltura(e.target.value)}/>
                     </div>
 
                     <button className="border p-1 px-4 rounded-lg bg-yellowMid transition ease-in-out hover:bg-yellowDark cursor-pointer" onClick={calc}>Calcular</button>
                 </div>
-                <h1 className="text-lg">Resultado: {!isNaN(result ?? NaN) ? result : msgError}</h1>
+                <h1 className="text-lg">Resultado: {result}</h1>
             </div>
         </>
     )
