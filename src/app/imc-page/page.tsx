@@ -41,17 +41,17 @@ export default function imcPage() {
             <div className="flex p-2 self-end z-10 rounded-xl">
                 <ToastContainer/>
             </div>
-            <div className="flex flex-col p-4 items-center justify-center max-w-[700px] max-h-[550px] h-5/6 w-5/6 bg-yellowLight rounded-lg fixed top-2/4 left-2/4 translate-y-[-45%] translate-x-[-50%] shadow-xl">
+            <div className="flex flex-col p-4 items-center justify-center max-w-[700px] max-h-[550px] h-5/6 w-5/6 bg-white rounded-lg fixed top-2/4 left-2/4 translate-y-[-45%] translate-x-[-50%] shadow-xl">
                 <h1 className="text-black text-2xl font-semibold">Calcular IMC</h1>
                 <div className="my-10 flex flex-col items-center gap-4">
                     <div className="flex flex-col items-center gap-1">
                         <label htmlFor="peso" className="text-lg">Insira seu peso</label>
-                        <input className="w-60 p-2 rounded-md shadow md:w-80" id="peso" type="text" value={peso} placeholder="ex: 60" onChange={(e) => setPeso(e.target.value)}/>
+                        <input className="bg-yellowLight w-60 p-2 rounded-md shadow md:w-80" id="peso" type="text" value={peso} placeholder="ex: 60" onChange={(e) => setPeso(e.target.value)}/>
                     </div>
 
                     <div className="flex flex-col items-center gap-1">
                         <label htmlFor="altura" className="text-lg">Insira sua altura</label>
-                        <input className="w-60 p-2 rounded-md shadow md:w-80" id="altura" type="text" value={altura} placeholder="ex: 1.68" onChange={(e) => setAltura(e.target.value)}/>
+                        <input className="bg-yellowLight w-60 p-2 rounded-md shadow md:w-80" id="altura" type="text" value={altura} placeholder="ex: 1.68" onChange={(e) => setAltura(e.target.value)}/>
                     </div>
 
                     <button className="border p-1 px-4 rounded-lg bg-yellowMid transition ease-in-out hover:bg-yellowDark cursor-pointer" onClick={calc}>Calcular</button>

@@ -56,32 +56,32 @@ export default function passouPage() {
             <div className="flex p-2 self-end z-10 rounded-xl">
                 <ToastContainer/>
             </div>
-            <div className="flex flex-col p-4 items-center justify-center max-w-[700px] max-h-[680px] h-5/6 w-5/6 bg-yellowLight rounded-lg fixed top-2/4 left-2/4 translate-y-[-45%] translate-x-[-50%] shadow-xl">
+            <div className="flex flex-col p-4 items-center justify-center max-w-[700px] max-h-[680px] h-5/6 w-5/6 bg-white rounded-lg fixed top-2/4 left-2/4 translate-y-[-45%] translate-x-[-50%] shadow-xl">
                 <h1 className="text-black text-2xl font-semibold">Passou ou não passou?</h1>
                 <div className="my-10 flex flex-col items-center gap-4">
                     <div className="flex flex-col items-center gap-1">
                         <label htmlFor="nota1" className="text-lg">Primeira nota</label>
-                        <input className="w-60 p-2 rounded-md md:w-80" id="nota1" type="text" value={nota1} placeholder="ex: 60" onChange={(e) => setNota1(e.target.value)}/>
+                        <input className="bg-yellowLight w-60 p-2 rounded-md md:w-80" id="nota1" type="text" value={nota1} placeholder="ex: 60" onChange={(e) => setNota1(e.target.value)}/>
                     </div>
 
                     <div className="flex flex-col items-center gap-1">
                         <label htmlFor="nota2" className="text-lg">Segunda nota</label>
-                        <input className="w-60 p-2 rounded-md md:w-80" id="nota2" type="text" value={nota2} placeholder="ex: 60" onChange={(e) => setNota2(e.target.value)}/>
+                        <input className="bg-yellowLight w-60 p-2 rounded-md md:w-80" id="nota2" type="text" value={nota2} placeholder="ex: 60" onChange={(e) => setNota2(e.target.value)}/>
                     </div>
 
                     <div className="flex flex-col items-center gap-1">
                         <label htmlFor="nota3" className="text-lg">Terceira nota</label>
-                        <input className="w-60 p-2 rounded-md md:w-80" id="nota3" type="text" value={nota3} placeholder="ex: 60" onChange={(e) => setNota3(e.target.value)}/>
+                        <input className="bg-yellowLight w-60 p-2 rounded-md md:w-80" id="nota3" type="text" value={nota3} placeholder="ex: 60" onChange={(e) => setNota3(e.target.value)}/>
                     </div>
 
                     <div className="flex flex-col items-center gap-1">
                         <label htmlFor="nota4" className="text-lg">Quarta nota</label>
-                        <input className="w-60 p-2 rounded-md md:w-80" id="nota4" type="text" value={nota4} placeholder="ex: 60" onChange={(e) => setNota4(e.target.value)}/>
+                        <input className="bg-yellowLight w-60 p-2 rounded-md md:w-80" id="nota4" type="text" value={nota4} placeholder="ex: 60" onChange={(e) => setNota4(e.target.value)}/>
                     </div>
 
                     <div className="flex flex-col items-center gap-1">
                         <label htmlFor="nota5" className="text-lg">Quinta nota</label>
-                        <input className="w-60 p-2 rounded-md md:w-80" id="nota5" type="text" value={nota5} placeholder="ex: 60" onChange={(e) => setNota5(e.target.value)}/>
+                        <input className="bg-yellowLight w-60 p-2 rounded-md md:w-80" id="nota5" type="text" value={nota5} placeholder="ex: 60" onChange={(e) => setNota5(e.target.value)}/>
                     </div>
 
                     <button className="border p-1 px-4 rounded-lg bg-yellowMid transition ease-in-out hover:bg-yellowDark cursor-pointer" onClick={calc}>Calcular</button>

@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-neutral-200`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-neutral-200 overflow-hidden`}
       >
       <Menu op1="Home" op2="IMC" op3="Passou"/>
         {children}
