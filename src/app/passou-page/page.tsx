@@ -56,7 +56,7 @@ export default function passouPage() {
             <div className="flex p-2 self-end z-10 rounded-xl">
                 <ToastContainer/>
             </div>
-            <div className="flex flex-col p-4 items-center justify-center max-w-[700px] max-h-[680px] h-5/6 w-5/6 bg-white rounded-lg fixed top-2/4 left-2/4 translate-y-[-45%] translate-x-[-50%] shadow-xl">
+            <div className="flex flex-col p-4 items-center justify-center max-w-[700px] max-h-[700px] h-5/6 w-5/6 bg-white rounded-lg fixed top-2/4 left-2/4 translate-y-[-45%] translate-x-[-50%] shadow-xl">
                 <h1 className="text-black text-2xl font-semibold">Passou ou não passou?</h1>
                 <div className="my-10 flex flex-col items-center gap-4">
                     <div className="flex flex-col items-center gap-1">
