@@ -25,14 +25,16 @@ interface ICard {
 export const Card = ({titulo, image, text, link} : ICard) => {
     return (
         <Tilt options={defaultOptions}>
-            <div className="bg-white flex flex-col items-center w-72 min-h-96 border rounded-xl p-4 shadow-md justify-between md:h-[480px]">
-                <Image className="rounded-lg" src={image} alt="" width={250} height={250} priority></Image>
-                <div className="flex flex-col items-center gap-2">
-                    <h1 className="text-xl font-semibold">{titulo}</h1>
-                    <p className="text-center">{text}</p>
+            <a href={link} className="cursor-default">
+                <div className="bg-white flex flex-col items-center w-72 min-h-96 border rounded-xl p-4 shadow-md justify-between md:h-[480px]">
+                    <Image className="rounded-lg" src={image} alt="" width={250} height={250} priority></Image>
+                    <div className="flex flex-col items-center gap-2">
+                        <h1 className="text-xl font-semibold">{titulo}</h1>
+                        <p className="text-center">{text}</p>
+                    </div>
+                    <div className="cursor-pointer border p-2 px-5 rounded-xl hover:bg-neutral-200 mt-2">Ler Mais</div>
                 </div>
-                <a className="border p-2 px-5 rounded-xl hover:bg-neutral-200 mt-2" href={link}>Ler Mais</a>
-            </div>
+            </a>
         </Tilt>
     )
 }
